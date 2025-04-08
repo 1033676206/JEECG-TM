@@ -21,6 +21,7 @@ import java.util.Map;
 @SpringBootApplication
 public class JeecgSystemApplication extends SpringBootServletInitializer {
 
+    // test
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(JeecgSystemApplication.class);
