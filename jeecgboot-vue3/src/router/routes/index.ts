@@ -6,6 +6,9 @@ import { mainOutRoutes } from './mainOut';
 import { PageEnum } from '/@/enums/pageEnum';
 import { t } from '/@/hooks/web/useI18n';
 
+// 新
+//import MapView from '@/views/gis/MapView.vue';
+
 const modules = import.meta.glob('./modules/**/*.ts', { eager: true });
 
 const routeModuleList: AppRouteModule[] = [];
@@ -64,5 +67,19 @@ export const TokenLoginRoute: AppRouteRecordRaw = {
     ignoreAuth: true,
   },
 };
+
+// 新
+// export const MapViewRoute: AppRouteRecordRaw = {
+//   path: '/dashboard',
+//   name: 'Dashboard',
+//   component: MapView,
+//   meta: {
+//     title: '地图',
+//     icon: 'ion:map-outline'
+//   }
+// };
+
 // Basic routing without permission
 export const basicRoutes = [LoginRoute, RootRoute, ...mainOutRoutes, REDIRECT_ROUTE, PAGE_NOT_FOUND_ROUTE, TokenLoginRoute, Oauth2LoginRoute];
+// 新
+//export const basicRoutes = [LoginRoute, RootRoute, ...mainOutRoutes, REDIRECT_ROUTE, PAGE_NOT_FOUND_ROUTE, TokenLoginRoute, Oauth2LoginRoute, MapViewRoute];
